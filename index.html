@@ -21,11 +21,11 @@
             title="zenith logo"
           />
         </div>
-        <!-- <ul class="navbar__list">
+        <ul class="navbar__list">
           <li class="navbar__list-link"><a href="#">FEATURES</a></li>
           <li class="navbar__list-link"><a href="#">INTEGRATIONS</a></li>
-          <li class="navbar__list-link"><a href="#">GET ZENITH</a></li>
-        </ul> -->
+          <button class="navbar__list-button"><a href="#">GET ZENITH</a></li>
+        </ul>
         <div class="navbar__hamburger">
           <span class="bar-top"></span>
           <span class="bar-bottom"></span>
@@ -33,7 +33,7 @@
       </nav>
     </header>
     <main class="hero-section">
-      <h1>All your communication. One place.</h1>
+      <h1 class="main-heading">All your communication. One place.</h1>
       <div class="hero-section__inboundcard">
         <img
           src="./zenith-assets/images/hero/inbound-card.png"
@@ -42,54 +42,63 @@
         />
       </div>
     </main>
-    <section class="features">
-      <h1 class="gradient-text">The features that matter</h1>
-      <div class="features__card-all">
-        <div class="features__card card1">
-          <h2>Mark all your completed threads in one place</h2>
-          <div>
+    <h1 class="gradient-text features-header">The features that matter</h1>
+    <section class="features__card">
+        <div class="card1">
+          <h2>Mark all your completed threads in one place</h2>          
             <img
-              src="./zenith-assets/images/features/features-checkboxes.png"
-            />
-          </div>
+              src="./zenith-assets/images/features/features-checkboxes.png" alt="checkboxes" title="checkboxes"
+            />          
         </div>
-        <div class="features__card card2">
-          <h2>Integrate all your communication platforms</h2>
-          <div>
+        <div class="card2">
+          <h2>Integrate all your communication platforms</h2>          
             <img
-              src="./zenith-assets/images/features/features-integrations.png"
-            />
-          </div>
+              src="./zenith-assets/images/features/features-integrations.png" alt="integrations" title="integrations"
+            />          
         </div>
-        <div class="features__card card3">
-          <h2>See all your notifications in one place</h2>
-          <div>
+        <div class="card3">
+          <h2>See all your notifications in one place</h2>          
             <img
-              src="./zenith-assets/images/features/features-notifications.png"
+              src="./zenith-assets/images/features/features-notifications.png" alt="notifications" title="notifications"
             />
-          </div>
         </div>
-        <div class="features__images">
-          <img src="./zenith-assets/images/features/zenith-dasboard.png" />
-        </div>
-      </div>
     </section>
+    <div class="features__dashboard">
+      <img src="./zenith-assets/images/features/zenith-dasboard.png" alt="dashboard" title="dashboard"/>
+    </div>
     <section class="products">
       <h1 class="gradient-text">Your favorite products finally together</h1>
-      <div class="products__images slack">
-        <img src="./zenith-assets/images/integrations/slack-full.png" />
-      </div>
-      <div class="products__images trello">
-        <img src="./zenith-assets/images/integrations/trello.png" />
-      </div>
-      <div class="products__images google">
-        <img src="./zenith-assets/images/integrations/google.png" />
-      </div>
-      <div class="products__images jira">
-        <img src="./zenith-assets/images/integrations/jira.png" />
-      </div>
-      <div class="products__images asana">
-        <img src="./zenith-assets/images/integrations/asana.png" />
+      <div class="products__logo-container">
+        <div class="slack">
+          <img
+            class="products__images"
+            src="./zenith-assets/images/integrations/slack-full.png" alt="slack logo" title="slack logo"
+          />
+        </div>
+        <div class="trello">
+          <img
+            class="products__images"
+            src="./zenith-assets/images/integrations/trello.png" alt="trello" title="trello"
+          />
+        </div>
+        <div class="google">
+          <img
+            class="products__images"
+            src="./zenith-assets/images/integrations/google.png" alt="google logo" title="google logo" 
+          />
+        </div>
+        <div class="jira">
+          <img
+            class="products__images"
+            src="./zenith-assets/images/integrations/jira.png" alt="jira" title="jira"
+          />
+        </div>
+        <div class="asana">
+          <img
+            class="products__images"
+            src="./zenith-assets/images/integrations/asana.png" alt="asana" title="asana"
+          />
+        </div>
       </div>
     </section>
     <footer class="footer">

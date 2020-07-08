@@ -1,4 +1,5 @@
 /* CSS RESET-------------------------------------- */
+
 * {
   box-sizing: border-box;
 }
@@ -47,9 +48,12 @@ ul {
   margin: 0;
 }
 
-.features img {
-  width: 100%;
-  padding: 0.5em 0.5em;
+input,
+label {
+  opacity: 0.4;
+  color: #f8f8f8;
+  background: #f8f8f8;
+  border-radius: 3em;
 }
 
 /* LAYOUT STYLES---------------------------------- */
@@ -79,15 +83,38 @@ ul {
   background-size: cover;
 }
 
-.features__card {
+.main-heading {
+  display: flex;
+  text-align: left;
+  margin-right: 0.25em;
+  padding-left: 0.5em;
+  font-weight: 900;
+}
+
+.features__card img {
+  width: 3em;
+  padding: 0.5em 0.5em;
+}
+
+.features h2 {
+  font-size: 1.15rem;
+}
+
+.card1,
+.card2,
+.card3 {
   display: flex;
   justify-content: space-between;
   border-radius: 0.75em;
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.15);
-  width: 90%;
+  margin-bottom: 1.25em;
+}
+
+.features__card {
+  display: grid;
+  max-width: 90rem;
+  grid-template-columns: 1fr;
   margin: auto;
-  margin-bottom: 0.65em;
-  vertical-align: middle;
 }
 
 .gradient-text {
@@ -103,16 +130,46 @@ ul {
 
 .products {
   width: 100%;
-  /* display: inline-block; */
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.products__logo-container {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "s t"
+    "g j"
+    "a a";
+  margin-bottom: 4em;
+  margin-top: 4em;
 }
 
 .products__images {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 33% auto 33%;
+  width: 6em;
+}
+.slack {
+  grid-area: s;
+  justify-self: center;
+}
+.trello {
+  grid-area: t;
+  justify-self: center;
+}
+.google {
+  grid-area: g;
+  justify-self: right;
+}
+.jira {
+  grid-area: j;
+  justify-self: center;
+}
+.asana {
+  grid-area: a;
+  justify-self: center;
 }
 
 .footer {
@@ -124,8 +181,10 @@ ul {
 
 .email {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 75%;
   margin-bottom: 10em;
+  margin: auto;
 }
 
 /* BLOCK STYLES----------------------------------- */
@@ -149,13 +208,14 @@ ul {
 }
 
 .hero-section__inboundcard {
-  width: 90%;
+  width: 80em;
   margin: auto;
 }
 
 .hero-section__inboundcard img {
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.15);
-  margin: auto;
+  /* margin: auto; */
+  width: 85em;
 }
 
 .features__card h2 {
@@ -163,43 +223,97 @@ ul {
   text-align: left;
 }
 
-.features__images {
+.features__dashboard {
   width: 90%;
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.15);
   margin: auto;
   border-radius: 0.75em;
+  margin-bottom: 3.5em;
 }
 
 .footer__header {
   color: #f8f8f8;
   margin-top: 0em;
   text-align: center;
-}
-
-input,
-label {
-  opacity: 0.4;
-  color: #f8f8f8;
-  background: #f8f8f8;
-  border-radius: 3em;
+  padding-top: 2em;
 }
 
 .download-btn {
-  position: relative;
+  /* position: relative; */
   background-color: #f8f8f8;
   border-radius: 3em;
+  margin-left: 0.75em;
 }
 
 .footer__list li {
   text-align: right;
-  padding-right: 0.65em;
+  padding-right: 0.75em;
 }
 
 .footer__list a {
   position: relative;
   text-align: right;
   color: #f8f8f8;
-  margin-top: 0.35em;
+  padding-top: 2em;
 }
 
 /* DESKTOP---------------------------------------- */
+
+@media (max-width: 560px) {
+  .navbar__list {
+    display: none;
+  }
+}
+
+@media (min-width: 559px) {
+  .main-heading {
+    width: 12em;
+  }
+  .main-heading,
+  .gradient-text {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .navbar__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar__list:nth-child(3) {
+    background-color: #f8f8f8;
+    border-radius: 0.75em;
+    width: 6em;
+  }
+  .navbar__list-link {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    margin: 0.75em;
+    margin-bottom: 3em;
+  }
+
+  .features__card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .products__logo-container {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "s t a j g";
+    margin-bottom: 4em;
+    margin-top: 4em;
+  }
+
+  /* #email input {
+    placeholder: name;
+  } */
+}
